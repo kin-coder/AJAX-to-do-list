@@ -1,0 +1,38 @@
+
+
+<table class="table table-hover">
+  <thead>
+   <tr class="table-danger">
+      
+      <th scope="col"  >Email</th>
+     <!--  <th scope="col">Content</th> -->
+      
+    </tr>
+  </thead>
+  <tbody id ="email">
+    <tr >
+      <% @emails.each do  |email|%> 
+         <th scope="col">
+           <a href=" <%= email_path(email.id)%>" data-remote= "true"> <%= email.object %></a> 
+      </th>
+       
+      <div id="affichage">
+       
+     </div>       
+       
+      
+     <!-- <td id ="<%= email.id%>"><%= email.body %> </td> -->
+     </tr>
+   </tbody>
+  <%end%>
+</table>
+<center  >
+<%=link_to 'recevoir un e-mail',emails_path ,class:"btn btn-info", type:"button",remote: true, method: :POST%>
+   </center>
+ 
+        
+
+     
+   
+ 
+  

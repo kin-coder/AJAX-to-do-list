@@ -1,0 +1,27 @@
+<center> <p style="color: #CD5C5C; font-size:100%">
+	<strong>
+	OBJECT:   <%=@email.object%></p>
+    </strong>
+     CONTENT:   <%= email.body %></p> </br>
+
+
+
+
+
+<%= link_to "delete", email_path(email.id), method: :delete , remote: true, class: "btn btn-warning"%>
+
+</br>
+
+
+
+    <% if email.read == true%>
+
+    <span class="btn btn-success"> <%=link_to "Lu", "/emails/#{email.id}", method: :put, remote: true%></span> 
+
+    <% else %>
+
+    <span class="btn btn-success"> <%=link_to "Non-lu", "/emails/#{email.id}", method: :put, remote: true%></span> 
+
+    <% end %>
+
+    </center>

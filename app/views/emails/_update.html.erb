@@ -1,0 +1,12 @@
+<div>
+ <% if email.read == true%>
+
+    <span class="btn btn-success"> <%=link_to "Lu", "/emails/#{email.id}", method: :put, remote: true%></span> 
+
+    <% else %>
+
+    <span class="btn btn-warning" style="color:#A647B3;"> <%=link_to "Non-lu", "/emails/#{email.id}", method: :put, remote: true%></span> 
+
+    <% end %>
+
+</div>
