@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les cellules de tableaux</title>
+    </head>
+
+    <body >
+      <h1><center>Emails</center></h1>
+
+      <CENTER>
+          <TABLE id="imail" width=60% border=1>
+
+            <TR>
+
+              <TD><b><center>Listes des emails</center></b></TD>
+
+              <TD><b><center>Emails sélectionnés</center></b></TD>
+
+            </TR>
+              <%@email.each do |email|%>
+            <TR>
+              <TD><a href = "<%=email_path(email.id)%>" data-remote= "true" > <%=email.object%></a></TD>
+
+
+              <TD id="<%=email.id%>"></TD>
+              <%end%>
+            </TR>
+
+
+          </TABLE> </br>
+          <center><%=link_to 'Recevoir Des mails','/emails', type:'button', class: "btn btn-outline-primary ",remote: true, method: :POST%></center><br>
+      </CENTER>
+    </body>
+</html>

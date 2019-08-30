@@ -1,0 +1,2 @@
+alert("SHOwing...");
+document.getElementById("<%=@email.id%>").insertAdjacentHTML("beforeend", "<%= j render 'show', mail: @email %>")

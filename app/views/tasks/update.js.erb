@@ -1,0 +1,12 @@
+alert("le fichier JS va être  UPDATE!");
+
+
+<%if @task.status == true %>
+
+        document.getElementById("<%= @task.id %>").style.textDecoration = "line-through";
+
+    <%else%>
+
+        document.getElementById("<%= @task.id %>").style.textDecoration = "";
+
+    <%end%>

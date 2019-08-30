@@ -1,0 +1,6 @@
+<li>
+  <%= task.title %>,
+  "Deadline : " <%=  task.deadline.strftime("%D")  %>
+   <%= link_to '🗑' "Edit this task",task_path(task) %>
+
+</li>
